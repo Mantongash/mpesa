@@ -35,7 +35,7 @@ exports.token = (req, res, next) => {
       let data = response.data;
       let access_token = data.access_token;
       req.token = access_token;
-      // console.log(data)
+      console.log(data)
 
       next();
     })
@@ -46,7 +46,7 @@ exports.mpesaPassword = (req, res) => {
   res.send(newPassword());
 };
 exports.stkPush = (req, res) => {
-  const token = req.token;
+  // const token = req.token;
 
   const phone = req.body.phone.substring(1);
   const amount = req.body.amount;
